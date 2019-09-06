@@ -1,65 +1,66 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    color: black;
-    background-color: black;
-    font-family: sans-serif;
-    overflow-x: hidden;
+  color: black;
+  background-color: black;
+  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
-
-
 .page {
-    height: 100vh;
-    background-image: url(egrrobotics.jpg);
-    background-size: cover;
-    width: 100vw;
+  height: 100vh;
+  background-image: url(egrrobotics.jpg);
+  background-size: cover;
+  width: 100vw;
 }
 
 nav {
-    background-color: white;
-    height: 12vh;
-    position: sticky;
-    top:0;
+  background-color: white;
+  height: 12vh;
+  position: sticky;
+  top: 0;
 }
 
 .left-menu {
-    display:;
-    width: 100vw;
-    height: 5vh;
+  width: 100vw;
+  height: 5vh;
 }
 
 .home-nav {
-    margin-left: 27vw;
+  margin-left: 27vw;
 }
 
 .left-menu li {
-    display: inline;
-    float: left;
-    margin: 1vw;
-    display: block;
-    font-weight: 600;
-    padding-right: 5%;
-    padding-top: 4vh;
+  float: left;
+  margin: 1vw;
+  display: block;
+  font-weight: 600;
+  padding-right: 5%;
+  padding-top: 4vh;
 }
 
 .left-menu a {
-    text-decoration: none;
-    color: #050754;
-    font-family: sans-serif;
+  text-decoration: none;
+  color: #050754;
+  font-family: sans-serif;
 }
 
 a:hover {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 .landing h1 {
-    text-align: center;
-    font-size: 400%;
-    color: white;
-    margin-top: 27vh;
+  text-align: center;
+  font-size: 400%;
+  color: white;
+  margin-top: 27vh;
 }
 
+@media only screen and (max-width: 550px) {
+  .landing h1 {
+    font-size: 250%;
+  }
+}
