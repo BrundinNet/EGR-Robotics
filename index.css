@@ -95,4 +95,8 @@ footer {
     background-color: white;
     text-align: center;
 }
+@media only screen and (max-width: 550px) {
+  .landing h1 {
+    font-size: 250%;
+  }
 
