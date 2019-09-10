@@ -1,102 +1,145 @@
 @charset "UTF-8";
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    color: black;
-    background-color: black;
-    font-family: sans-serif;
-    overflow-x: hidden;
+  color: black;
+  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
-
-
 .page {
-    height: 100vh;
-    background-image: url(egrrobotics.jpg);
-    background-size: cover;
-    width: 100vw;
+  height: 100vh;
+  background: rgb(2, 0, 105);
+  width: 100vw;
+  padding-top: 1px;
+  animation: pageImageFade 1s forwards;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-image: url(egrrobotics.jpg);
+  background-size: cover;
+
+  animation: fadeIn 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
 }
 
 nav {
-    background-color: white;
-    height: 12vh;
-    position: sticky;
-    top:0;
+  background-color: white;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  z-index: 9000;
 }
 
 .left-menu {
-    width: 100vw;
-    height: 5vh;
+  width: 100vw;
+  height: 5vh;
 }
 
 .home-nav {
-    margin-left: 27vw;
+  margin-left: 27vw;
 }
 
 .left-menu li {
-    display: inline;
-    float: left;
-    margin: 1vw;
-    display: block;
-    font-weight: 600;
-    padding-right: 5%;
-    padding-top: 4vh;
+  display: inline;
+  float: left;
+  margin: 1vw;
+  display: block;
+  font-weight: 600;
+  padding-right: 5%;
+  padding-top: 4vh;
 }
 
 .left-menu a {
-    text-decoration: none;
-    color: #050754;
-    font-family: sans-serif;
+  text-decoration: none;
+  color: #050754;
+  font-family: sans-serif;
 }
 
 a:hover {
-    color: blueviolet;
+  color: blueviolet;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+p {
+  font-size: 30px;
 }
 
 .landing h1 {
-    color: white;
-    text-align: center; 
-    /*  -webkit-text-stroke-width: 0px;
-     -webkit-text-stroke-color: ;
-    */
-    animation: landing-text 1.5s forwards;
+  opacity: 0;
+  color: white;
+  text-align: center;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  animation: landing-text 1.5s forwards;
 }
 
 @keyframes landing-text {
-    0%{
-    margin-bottom: -10vh;
-        
-    }
-    100% {
-    font-size: 400%;
+  0% {
+    font-size: 11vmin;
+    margin-top: 20vh;
+  }
+  100% {
+    opacity: 1;
+    font-size: 15vmin;
     margin-top: 27vh;
-    }
+  }
 }
 
-.landing-word h1{
-        background-color:white;
+.landing-word h1 {
+  background-color: white;
 }
 
 .about {
-    padding-top: 10vh;
-    height: 75vh;
-    background-color: white;
+  height: 75vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 50px;
+  align-items: center;
+  padding: 0 50px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.about-text {
-    width: 50%;
-    margin-left: 25%;
+h2 {
+  font: 100px;
+}
+
+text-header {
+  margin-bottom: 10px;
+}
+
+.about img {
+  width: 100%;
 }
 
 footer {
-    background-color: white;
-    text-align: center;
+  background-color: white;
+  text-align: center;
 }
+
 @media only screen and (max-width: 550px) {
   .landing h1 {
     font-size: 250%;
   }
-
+}
